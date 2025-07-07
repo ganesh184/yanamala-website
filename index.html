@@ -12,13 +12,14 @@
   <header>
     <div class="container">
       <h1>Yanamala Services PVT LTD</h1>
+      <p style="font-size:0.9rem; color:#555;">
+        CIN: U12345TG2025PTC012345 | GSTIN: 36ABCDE1234F1Z5
+      </p>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#collab">Collaborations</a></li>
-          <li><a href="#feedback">Feedback</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#jobs">Job Vacancies</a></li>
         </ul>
       </nav>
     </div>
@@ -34,11 +35,11 @@
 
   <!-- Founder Section -->
   <section id="founder" style="display: flex; justify-content: flex-end; background: #fff; padding: 40px 0;">
-    <div class="container" style="display: flex; justify-content: flex-end;">
-      <div style="text-align: center; max-width: 300px;">
-        <img src="founder.jpg" alt="Founder Image" style="max-width: 200px; border-radius: 10px; margin-bottom: 10px;" />
-        <h4 style="margin-top: 10px;">Yanamala Ganesh Reddy</h4>
-        <p style="font-size: 0.9rem; color: #666;">B.E in Computer Science & Engineering</p>
+    <div class="container" style="display:flex; justify-content:flex-end;">
+      <div style="text-align:center; max-width:300px;">
+        <img src="founder.jpg" alt="Founder Image" style="max-width:200px; border-radius:10px; margin-bottom:10px;" />
+        <h4 style="margin-top:10px;">Yanamala Ganesh Reddy</h4>
+        <p style="font-size:0.9rem; color:#666;">B.E in Computer Science & Engineering</p>
       </div>
     </div>
   </section>
@@ -49,7 +50,6 @@
       <h2>About Yanamala Services Pvt Ltd</h2>
       <p>Yanamala Services Pvt Ltd is an emerging force in India’s digital service landscape, committed to delivering exceptional value through innovation and affordability.</p>
       <p>Founded with a vision to make everyday services accessible, efficient, and cost-effective, we currently operate two flagship platforms under our brand: <strong>Yanserv Food Delivery</strong> and <strong>Yanserv Champ</strong>.</p>
-
       <h3 style="margin-top: 30px; color: #004e92;">Our Vision</h3>
       <p>To revolutionize daily digital services by combining affordability, accessibility, and academic empowerment, helping every user—whether a hungry student or a striving scholar—get more for less, every day.</p>
     </div>
@@ -65,64 +65,70 @@
           <h3>Yanserv Food Delivery</h3>
           <p><strong>Great Food, Unbeatable Prices, All Year Round</strong></p>
           <p>Yanserv Food Delivery is our fast-growing online food delivery platform built for value-conscious consumers. We offer consistently lower prices, transparent service, and 365-day exclusive offers—every single day of the year.</p>
-          <p>Whether you're craving local favorites or comfort food, Yanserv ensures it reaches you faster, fresher, and cheaper. That’s our promise.</p>
         </div>
         <div class="card">
           <img src="yanserv-champ-logo.png" alt="Yanserv Champ" style="max-width:100px; margin-bottom:10px;">
           <h3>Yanserv Champ</h3>
           <p><strong>Your Companion for Academic Excellence</strong></p>
           <p>Yanserv Champ is a competitive examination platform designed for school and intermediate students. We offer the most comprehensive set of practice papers, curated questions, and detailed solutions with expert explanations.</p>
-          <p>With our tools, students can confidently prepare for school-level exams, entrance tests, and academic challenges with a competitive edge.</p>
         </div>
       </div>
-      <p style="text-align:center; font-size: 0.9rem; color: #666; margin-top: 20px;">
-        (Upload product logos as <code>yanserv-food-logo.png</code> and <code>yanserv-champ-logo.png</code>)
-      </p>
     </div>
   </section>
 
-  <!-- Collaborations -->
-  <section id="collab">
-    <div class="container">
-      <h2>Collaborations</h2>
-      <ul>
-        <li>TechPartner Inc.</li>
-        <li>IndiaSmartServices</li>
-        <li>FutureFood Networks</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Feedback -->
+  <!-- Feedback Slider -->
   <section id="feedback">
     <div class="container">
-      <h2>What People Say</h2>
-      <div class="testimonials">
-        <blockquote>
-          "Yanserv Food Delivery is a game-changer in our city!" – Customer A
-        </blockquote>
-        <blockquote>
-          "Working at Yanamala Services has been a life-changing experience." – Team Member B
-        </blockquote>
+      <h2>Employee Feedback</h2>
+      <div class="testimonial-slider">
+        <div class="slide"><p>"Great culture to work in."</p><p><strong>– Ravi Kumar, Developer</strong></p></div>
+        <div class="slide"><p>"Supportive management and opportunities."</p><p><strong>– Anjali Sharma, Marketing Executive</strong></p></div>
       </div>
+      <button id="prevSlide">←</button>
+      <button id="nextSlide">→</button>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
+  <!-- Job Vacancies -->
+  <section id="jobs">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> +91 97050 02066</p>
-      <p><strong>Email:</strong> contact@yanamalaservices.com</p>
-      <p><strong>Address:</strong> 123 Innovation Park, Hyderabad, Telangana, India</p>
+      <h2>Job Vacancies</h2>
+      <button id="openJobs">View Vacancies</button>
 
-      <!-- ✅ Formspree Form -->
-      <form action="https://formspree.io/f/yourFormID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <div id="jobFormContainer" style="display:none; margin-top:30px;">
+        <form id="jobForm" action="https://formspree.io/f/yourHRFormID" method="POST">
+          <h3>Personal Details</h3>
+          <div class="field-row">
+            <input name="firstName" placeholder="First Name" required />
+            <input name="lastName" placeholder="Last Name" required />
+          </div>
+          <input name="mobile" placeholder="Mobile Number" required />
+          <input name="email" placeholder="Email" required />
+          <input name="father" placeholder="Father Name" />
+          <input name="mother" placeholder="Mother Name" />
+          <input name="altMobile" placeholder="Alternate Number" />
+          <textarea name="address" placeholder="Address"></textarea>
+          <p>Experience:</p>
+          <label><input type="radio" name="experience" value="Fresher" required /> Fresher</label>
+          <label><input type="radio" name="experience" value="Experienced" required /> Experienced</label>
+
+          <div id="fresherFields" style="display:none;">
+            <h4>Technical Skills</h4>
+            <textarea name="skills" placeholder="List your skills and proficiency"></textarea>
+          </div>
+
+          <div id="experiencedFields" style="display:none;">
+            <h4>Previous Employment</h4>
+            <input name="prevEmployer" placeholder="Employer Name" />
+            <input name="employerLocation" placeholder="Location" />
+            <input name="yearsWorked" placeholder="Years Worked" />
+            <input name="prevDesignation" placeholder="Designation" />
+            <textarea name="reasonToJoin" placeholder="Reason to Join"></textarea>
+          </div>
+
+          <button type="submit">Review & Submit</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -132,6 +138,32 @@
       <p>© 2025 Yanamala Services PVT LTD. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('openJobs').onclick = () => {
+      document.getElementById('jobFormContainer').style.display = 'block';
+      window.location = '#jobFormContainer';
+    };
+
+    const expRadios = document.querySelectorAll('input[name="experience"]');
+    expRadios.forEach(r => r.onchange = () => {
+      document.getElementById('fresherFields').style.display = r.value === 'Fresher' ? 'block' : 'none';
+      document.getElementById('experiencedFields').style.display = r.value === 'Experienced' ? 'block' : 'none';
+    });
+
+    let slides = document.querySelectorAll('.slide'), current = 0;
+    document.getElementById('nextSlide').onclick = () => {
+      slides[current].style.display = 'none';
+      current = (current + 1) % slides.length;
+      slides[current].style.display = 'block';
+    };
+    document.getElementById('prevSlide').onclick = () => {
+      slides[current].style.display = 'none';
+      current = (current - 1 + slides.length) % slides.length;
+      slides[current].style.display = 'block';
+    };
+    slides.forEach((s, i) => s.style.display = i === 0 ? 'block' : 'none');
+  </script>
 
 </body>
 </html>
